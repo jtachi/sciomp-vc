@@ -6,7 +6,7 @@ def detect_problems(filename):
     data.columns = ['chrom','chromStart','chromEnd','name','score','strand','level','signif','score2']
     if data['score2'].min() < 1 and data['score'].min() > 0:
         print 'Suspicious data!'
-    elif data.loc[data['chrom'] == 'chrM']['score'].mean() > 300:
+    elif data.loc[data['chrom'] == 'chrM']['score'].mean() > 50:
         print 'High scores on chrM!'
     else:
         print 'Seems OK!'
