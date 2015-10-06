@@ -12,7 +12,7 @@ def detect_problems(filename):
         print 'Seems OK!'
         
 import glob
-filenames = glob.glob('*.bed')
+filenames = glob.glob('C:\Users\Dr. Chi\gcbCourse\materials\cshl_rna_seq.bed')
 for f in filenames[:3]:
     print f
     detect_problems(f)
